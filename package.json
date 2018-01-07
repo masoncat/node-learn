@@ -1,0 +1,23 @@
+{
+  "name": "node-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masoncat/node-learn.git"
+  },
+  "author": "wm.liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masoncat/node-learn/issues"
+  },
+  "homepage": "https://github.com/masoncat/node-learn#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.14.8"
+  }
+}
