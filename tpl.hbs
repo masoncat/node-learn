@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+<html>
+<head>
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    {{#each chunkJson}}
+        <meta cache-files="qp" href="{{this}}">
+    {{/each}}
+    <link rel="apple-touch-icon-precomposed" href="//s.qunarzz.com/imall/logo/qunar-touch.png">
+    <title>{{title}}</title>
+    <script>
+        var START_TIME = new Date();
+    </script>
+    {{#if rem}}
+        {{> remmin}}
+    {{/if}}
+    {{#each css}}
+        <link rel="stylesheet" href="{{this}}" type="text/css">
+    {{/each}}
+    <meta name="baidu-site-verification" content="UX6uUG4Czr" />
+    {{#each meta}}
+        <meta name="{{@key}}" content="{{this}}"/>
+    {{/each}}
+    {{#if base}}
+        <base href={{base}}>
+    {{/if}}
+</head>
+<body>
+{{#if wxshare300}}
+    <div style="display:none;"><img src="{{wxshare300}}" alt=""/></div>
+{{else}}
+    <div style="display:none;"><img src="//s.qunarzz.com/imall/wechat/share1.png"
+                                    alt=""/></div>
+{{/if}}
+<div id="superCon" class="{{globalClass}}"></div>
+<script>
+        {{{extraScript}}};
+    window.DATA = [{{{DATA}}}][0] || {};
+    window.INFO = [{{{INFO}}}][0] || {};
+</script>
+{{#each libJs}}
+    <!--<script src={{this}}  crossorigin="anonymous"></script>    https的响应头不对，需要找ops-->
+    <script src={{this}}></script>
+{{/each}}
+{{#each openjs}}
+    <script src="{{this}}"></script>
+{{/each}}
+{{#each js}}
+    <!--<script src={{this}} crossorigin="anonymous"></script>-->
+    <script src={{this}}></script>
+{{/each}}
+</body>
+</html>
+<!--
+</body>
+</html>
+-->

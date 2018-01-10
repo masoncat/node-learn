@@ -1,7 +1,7 @@
 {
   "name": "node-learn",
   "version": "1.0.0",
-  "description": "",
+  "description": "learn node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +18,10 @@
   "homepage": "https://github.com/masoncat/node-learn#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "nodegit": "^0.20.3"
+  },
+  "devDependencies": {
     "nodemon": "^1.14.8"
   }
 }
